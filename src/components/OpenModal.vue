@@ -32,8 +32,19 @@
     .modal{
       background-color: #fff;
       padding: 3rem 5rem;
+      border-radius: 4px;
       p{
         margin: 1rem 0;
+      }
+      button{
+        font-size: 16px;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-top: 4px;
       }
     }
   }
