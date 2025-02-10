@@ -24,6 +24,7 @@
     gap:2rem;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 3rem 0;
     .card{
       width: 200px;
       text-align: center;

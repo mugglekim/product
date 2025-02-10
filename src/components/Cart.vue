@@ -3,7 +3,7 @@
     <OpenModal :isOpen="isOpenModal" @closeModal="closeModal"/>
     <div class="cart-list">
       <h2>장바구니</h2>
-      <h4 v-if="cart.length===0">장바구니가 비었습니다.</h4>
+      <p v-if="cart.length===0" class="emptyTxt">장바구니가 비었습니다.</p>
       <ul v-else>
         <li v-for="list in cart" :key="list.id">
           <img :src="list.image" :alt="list.name+'이미지'">
@@ -82,13 +82,22 @@ import { useRouter } from 'vue-router';
     gap: 1rem;
     .cart-list, .order-list{
       flex: 1;
-      border: 1px solid #222;
-      border-radius:8px;
-      padding: 2rem;
+      background-color: #eee;
+      border-radius: 8px;
+      padding: 3rem 2rem;
+      h2{
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #000;
+      }
     }
     .cart-list{
-      h4{
+      p.emptyTxt{
+        text-align: center;
+        padding-top: 8rem;
         color: #888;
+      }
+      h4{
+        color: saddlebrown;
         text-align: center;
       }
       ul{
@@ -110,8 +119,9 @@ import { useRouter } from 'vue-router';
         padding: 0.3rem 0.5rem;
         border-radius: 4px;
         margin-top: 4px;
+        background-color: #ddd;
         &:hover{
-          background-color: #ddd;
+          background-color: #ccc;
         }
       }
     }
@@ -119,18 +129,26 @@ import { useRouter } from 'vue-router';
       .total{
         padding: 1rem 0;
         p{
-          margin: 1rem 0;
+          margin: 0.5rem 0;
+          &:last-of-type{
+            margin-top: 2rem;
+            font-size: 20px;
+            font-weight: 700;
+          }
         }
       }
       button{
         font-size: 16px;
         width: 100%;
-        background-color: #000;
+        background-color: #111;
         color: #fff;
         border: none;
         padding: 0.8rem 1rem;
         border-radius: 4px;
         margin-top: 4px;
+        &:hover{
+          background-color: #000;
+        }
       }
     }
   }
