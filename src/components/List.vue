@@ -3,7 +3,7 @@
     <div class="card" v-for="list in products" :key="list.id">
       <img :src="list.image" :alt="list.name+'이미지'">
       <p>가격 : {{ list.price }}</p>
-      <button @click="addToList(list)">장바구니 추가</button>
+      <button @click="addToList(list)">🛒장바구니추가</button>
     </div>
   </div>
 </template>
@@ -27,11 +27,22 @@
     .card{
       width: 200px;
       text-align: center;
-    }
-    img{
+      img{
       width: 100%;
       height: 200px;
       object-fit: cover;
+      }
+      button{
+        font-size: 12px;
+        color: #555;
+        border: none;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        margin-top: 4px;
+        &:hover{
+          background-color: #ddd;
+        }
+      }
     }
   }
 </style>

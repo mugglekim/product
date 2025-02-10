@@ -103,6 +103,14 @@ import { useRouter } from 'vue-router';
           }
         }
       }
+      button{
+        font-size: 12px;
+        color: #555;
+        border: none;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        margin-top: 4px;
+      }
     }
     .order-list{
       .total{
@@ -110,6 +118,16 @@ import { useRouter } from 'vue-router';
         p{
           margin: 1rem 0;
         }
+      }
+      button{
+        font-size: 16px;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 1rem;
+        border-radius: 4px;
+        margin-top: 4px;
       }
     }
   }
