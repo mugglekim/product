@@ -19,8 +19,8 @@
       <div class="total">
         <p>상품금액 : {{ totalPrice }}원</p>
         <p>배송비 : {{ fee===0? "무료":`${fee}원` }}</p>
-        <p>(배송비 3,000원 / 5만원 이상 구매시 무료배송)</p>
-        <p>총 결제금액 : {{ payment }}</p>
+        <p>(배송비 3000원 / 5만원 이상 구매시 무료배송)</p>
+        <p>총 결제금액 : {{ payment }}원</p>
         <button @click="handleOpen">주문결제</button>
       </div>
     </div>
@@ -110,6 +110,9 @@ import { useRouter } from 'vue-router';
         padding: 0.3rem 0.5rem;
         border-radius: 4px;
         margin-top: 4px;
+        &:hover{
+          background-color: #ddd;
+        }
       }
     }
     .order-list{
@@ -125,7 +128,7 @@ import { useRouter } from 'vue-router';
         background-color: #000;
         color: #fff;
         border: none;
-        padding: 1rem;
+        padding: 0.8rem 1rem;
         border-radius: 4px;
         margin-top: 4px;
       }
